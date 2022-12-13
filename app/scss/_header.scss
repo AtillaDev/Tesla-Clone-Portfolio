@@ -1,0 +1,150 @@
+.header {
+  height: 3.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+
+  &__left {
+    // font-size: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    padding-left: 2rem;
+
+    @include breakpoint-down(large) {
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+
+    @include breakpoint-down(small) {
+      padding-left: 0.5rem;
+    }
+  }
+
+  &__right {
+    display: flex;
+    padding-right: 1rem;
+    justify-content: center;
+    align-items: center;
+    // a {
+    //   margin: 0;
+    // }
+
+    @include breakpoint-down(large) {
+      // margin-left: 0;
+      // padding: 0;
+      // width: 3.5rem;
+      padding-right: 1.25rem;
+    }
+
+    @include breakpoint-down(small) {
+      // margin-left: 0;
+      // padding: 0;
+      // width: 3.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+
+  &__logo {
+    padding: 0 1rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    &__img {
+      height: 1.5rem;
+      width: 7.5rem;
+      line-height: 3rem;
+      color: $primary-color;
+    }
+  }
+
+  &__middle {
+    display: flex;
+    margin-left: 8rem;
+    padding: 0 0.5rem;
+    width: 40rem;
+    align-items: center;
+
+    @include breakpoint-down(large) {
+      display: none;
+    }
+  }
+
+  &__nav__link {
+    padding: 0 0.5rem;
+
+    &__content {
+      // width: 1.25rem;
+      padding: 0;
+      font-size: 0.875rem;
+      margin: 0 0.5rem;
+      font-weight: 500;
+      border-radius: 0.9375rem;
+      // display: inline-block;
+      text-transform: capitalize;
+      color: $primary-color;
+      // font-size: 12.5rem;
+
+      @include breakpoint-down(large) {
+        display: none;
+      }
+    }
+  }
+}
+
+.header__nav-link:hover {
+  background: #0000001c;
+}
+
+.menu-btn {
+  @include breakpoint-down(large) {
+    display: inline-block;
+
+    margin: 0 0.5rem;
+    // border-radius: 0.25rem;
+  }
+}
+.menu-btn-container {
+  @include breakpoint-down(large) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+}
+
+.down-icon {
+  position: fixed;
+  bottom: 3.5%;
+  right: 50%;
+  transition: fill 0.3s opacity ease, stroke 0.3s opacity ease;
+  transform: translateX(50%);
+  font-size: 1.1rem;
+  z-index: 100;
+  animation-name: example;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0% {
+    transform: translate(50%, 0);
+  }
+
+  70% {
+    transform: translate(50%, -12%);
+  }
+
+  100% {
+    transform: translate(50%, 18%);
+  }
+}

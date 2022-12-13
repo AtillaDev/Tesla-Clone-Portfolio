@@ -1,0 +1,47 @@
+.footer {
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+
+  @include breakpoint-down(large) {
+    // padding: 5rem 0;
+    // margin-bottom: -50%;
+    // margin-top: ;
+  }
+}
+
+.footer ul {
+  padding: 0;
+  width: 40rem;
+  margin: 1.25rem auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+
+  @include breakpoint-down(large) {
+    width: 95%;
+    flex-wrap: wrap;
+    justify-content: center;
+    // margin-top: ;
+  }
+}
+
+.footer ul li {
+  padding: 0.5rem 0;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.footer ul li:not(:last-child) a {
+  margin-right: 0.875rem;
+}
+
+.footer ul li:first-child {
+  margin-left: 1rem;
+}
+
+.footer ul li a {
+  color: #5c5e62;
+  font-size: 0.75rem;
+}
