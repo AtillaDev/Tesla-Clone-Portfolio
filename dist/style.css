@@ -476,29 +476,15 @@ textarea {
   transform: translateX(50%);
   font-size: 1.1rem;
   z-index: 100;
-  -webkit-animation-name: example;
-          animation-name: example;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  color: black;
+  animation-name: example;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
   cursor: pointer;
 }
 
-.down-icon:active {
+.down-icon:active .down-icon:visited {
   color: black;
-}
-
-@-webkit-keyframes example {
-  0% {
-    transform: translate(50%, 0);
-  }
-  70% {
-    transform: translate(50%, -12%);
-  }
-  100% {
-    transform: translate(50%, 18%);
-  }
 }
 
 @keyframes example {

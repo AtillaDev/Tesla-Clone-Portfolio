@@ -133,13 +133,14 @@
   transform: translateX(50%);
   font-size: 1.1rem;
   z-index: 100;
+  color: black;
   animation-name: example;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
   cursor: pointer;
 }
 
-.down-icon:active {
+.down-icon:active .down-icon:visited {
   color: black;
 }
 
